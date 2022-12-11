@@ -8,7 +8,7 @@ mod parser;
 fn main() {
     let input_blob = std::io::stdin().lock().lines().map( |line|  line.unwrap()).collect::<Vec<String>>().join("\n");
 
-    match full_parse(&&input_blob[..]) {
+    match full_parse(&input_blob[..]) {
         Ok((_input, (mut stacks, moves))) => {
             // dbg!(&stacks);
             // dbg!(&moves);
